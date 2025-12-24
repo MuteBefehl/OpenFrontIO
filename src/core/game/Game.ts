@@ -205,6 +205,9 @@ export enum UnitType {
   MIRVWarhead = "MIRV Warhead",
   Train = "Train",
   Factory = "Factory",
+  Airbase = "Airbase",
+  Jet = "Jet",
+  AirMissile = "Air Missile",
 }
 
 export enum TrainType {
@@ -219,6 +222,7 @@ const _structureTypes: ReadonlySet<UnitType> = new Set([
   UnitType.MissileSilo,
   UnitType.Port,
   UnitType.Factory,
+  UnitType.Airbase,
 ]);
 
 export function isStructureType(type: UnitType): boolean {
@@ -287,6 +291,14 @@ export interface UnitParamsMap {
   [UnitType.MIRVWarhead]: {
     targetTile?: number;
   };
+
+  [UnitType.Airbase]: Record<string, never>;
+
+  [UnitType.Jet]: {
+    patrolTile: TileRef;
+  };
+
+  [UnitType.AirMissile]: Record<string, never>;
 }
 
 // Type helper to get params type for a specific unit type

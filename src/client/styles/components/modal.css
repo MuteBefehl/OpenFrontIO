@@ -15,6 +15,7 @@
 
 .c-modal__wrapper {
   background: #23232382;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   min-width: 340px;
   max-width: 860px;
@@ -44,7 +45,7 @@
   padding: 1.4rem;
   max-height: 60dvh;
   overflow-y: scroll;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
 }
 
 /*This will be removed in future*/

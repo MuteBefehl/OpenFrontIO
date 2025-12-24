@@ -1,11 +1,12 @@
 .c-button {
-  background: var(--primaryColor);
+  background: rgba(139, 26, 26, 0.3);
+  backdrop-filter: blur(8px);
   color: #fff;
   cursor: pointer;
   outline: none;
   display: inline-block;
   font-size: 16px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   padding: 0.8rem 1rem;
   border-radius: 8px;
@@ -19,7 +20,8 @@
 .c-button:hover,
 .c-button:active,
 .c-button:focus {
-  background: var(--primaryColorHover);
+  background: rgba(107, 21, 21, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition);
 }
 
@@ -31,14 +33,17 @@
 }
 
 .c-button--secondary {
-  background: var(--secondaryColor);
+  background: rgba(39, 174, 96, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--fontColorLight);
 }
 
 .c-button--secondary:hover,
 .c-button--secondary:active,
 .c-button--secondary:focus {
-  background: var(--secondaryColorHover);
+  background: rgba(30, 132, 73, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .c-button--block {

@@ -10,8 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: #1e1e1e;
-  border: 1px solid #333;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   padding: 12px 20px;
   width: 360px !important;
@@ -120,7 +121,8 @@
 }
 
 .setting-item:hover {
-  background: #2a2a2a;
+  background: rgba(42, 42, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .setting-item.easter-egg:hover {

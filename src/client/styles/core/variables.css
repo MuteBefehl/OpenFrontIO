@@ -17,6 +17,15 @@
   --secondaryColorHover: #1e8449;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+  /* Glassmorphism variables */
+  --glass-bg: rgba(35, 35, 35, 0.5);
+  --glass-bg-hover: rgba(42, 42, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-hover: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(12px);
+  --glass-blur-light: blur(8px);
+  --glass-blur-heavy: blur(16px);
+
   --primaryColorDark: #8b1a1a;
   --primaryColorHoverDark: #6b1515;
   --primaryColorDisabledDark: rgba(139, 26, 26, 0.5);

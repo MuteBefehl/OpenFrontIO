@@ -1,6 +1,7 @@
 .l-header {
-  background: var(--boxBackgroundColor);
+  background: rgba(17, 24, 39, 0.8);
   backdrop-filter: blur(var(--blur-md));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   padding: 24px 24px 12px;

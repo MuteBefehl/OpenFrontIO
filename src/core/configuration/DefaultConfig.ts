@@ -544,6 +544,35 @@ export class DefaultConfig implements Config {
           territoryBound: false,
           experimental: true,
         };
+      case UnitType.Airbase:
+        return {
+          cost: this.costWrapper(
+            (numUnits: number) =>
+              Math.min(2_000_000, Math.pow(2, numUnits) * 500_000),
+            UnitType.Airbase,
+          ),
+          territoryBound: true,
+          constructionDuration: this.instantBuild() ? 0 : 15 * 10,
+          upgradable: true,
+          experimental: true,
+        };
+      case UnitType.Jet:
+        return {
+          cost: this.costWrapper(
+            (numUnits: number) =>
+              Math.min(1_500_000, (numUnits + 1) * 300_000),
+            UnitType.Jet,
+          ),
+          territoryBound: false,
+          maxHealth: 800,
+          experimental: true,
+        };
+      case UnitType.AirMissile:
+        return {
+          cost: () => 0n,
+          territoryBound: false,
+          damage: 200,
+        };
       default:
         assertNever(type);
     }
@@ -970,6 +999,18 @@ export class DefaultConfig implements Config {
 
   warshipShellAttackRate(): number {
     return 20;
+  }
+
+  jetPatrolRange(): number {
+    return 80;
+  }
+
+  jetTargettingRange(): number {
+    return 50;
+  }
+
+  jetMissileAttackRate(): number {
+    return 30;
   }
 
   defensePostShellAttackRate(): number {
